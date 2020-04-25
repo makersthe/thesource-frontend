@@ -20,6 +20,7 @@ module.exports = {
     'no-alert': [0],
     'no-console': [0],
     'no-plusplus': [0],
+    'no-param-reassign': [0], // TEMP: Fix customize-cra issues in config-overrides
     'no-underscore-dangle': [0],
     'no-unused-vars': ['error', { argsIgnorePattern: '[rR]eplace' }],
     'prefer-destructuring': [0],

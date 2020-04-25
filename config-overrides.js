@@ -1,7 +1,7 @@
 const {
   override,
   fixBabelImports,
-  // addLessLoader,
+  addLessLoader,
   addDecoratorsLegacy,
 } = require('customize-cra')
 
@@ -11,12 +11,14 @@ module.exports = {
     fixBabelImports('import', {
       libraryName: 'antd',
       libraryDirectory: 'es',
-      style: 'css',
+      style: true,
     }),
 
-    // addLessLoader({
-    //   javascriptEnabled: true,
-    //   modifyVars: { '@primary-color': '#1DA57A' },
-    // }),
+    addLessLoader({
+      lessOptions: {
+        javascriptEnabled: true,
+        modifyVars: { '@primary-color': 'black' },
+      },
+    }),
   ),
 }
