@@ -5,6 +5,7 @@
   "dependencies": {
     "antd": "^4.1.4",
     "customize-cra": "^1.0.0-alpha.0",
+    "debug": "^4.1.1",
     "mobx": "^5.15.4",
     "mobx-react": "^6.2.2",
     "react": "^16.13.1",
@@ -12,8 +13,8 @@
     "react-scripts": "^3.4.1"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "start": "cp ./.env.dev ./.env && react-app-rewired start",
+    "build": "cp ./.env.prod ./.env && react-app-rewired build",
     "test": "react-app-rewired test"
   },
   "eslintConfig": {
@@ -35,7 +36,6 @@
     "@babel/plugin-proposal-decorators": "^7.8.3",
     "babel-eslint": "^10.1.0",
     "babel-plugin-import": "^1.13.0",
-    "debug": "^4.1.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.11.0",

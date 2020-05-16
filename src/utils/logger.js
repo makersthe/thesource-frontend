@@ -1,6 +1,6 @@
 import debug from 'debug'
 
-const BASE = 'owdin-dashboard'
+const BASE = 'thesource'
 const COLORS = {
   trace: 'lightblue',
   info: 'blue',
