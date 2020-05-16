@@ -4,7 +4,7 @@ import Logger from './utils/logger'
 
 class App extends React.Component {
   componentDidMount() {
-    Logger.info('Mounted')
+    Logger.info('App.js:componentDidMount()', this)
   }
 
   render() {
