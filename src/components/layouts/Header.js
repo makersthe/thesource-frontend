@@ -15,6 +15,10 @@ const searchOption = Object.entries(contentNames).map((item) => (
   </Option>
 ))
 
+const menuItems = Object.entries(contentNames).map((item) => (
+  <Menu.Item key={item[0]}>{item[1]}</Menu.Item>
+))
+
 const selectBefore = <Select defaultValue="video">{searchOption}</Select>
 
 class HeaderWrapper extends React.Component {
@@ -79,10 +83,7 @@ class HeaderWrapper extends React.Component {
           />
         </div>
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['video']}>
-          <Menu.Item key="video">영상</Menu.Item>
-          <Menu.Item key="image">이미지</Menu.Item>
-          <Menu.Item key="audio">음원</Menu.Item>
-          <Menu.Item key="font">폰트</Menu.Item>
+          {menuItems}
         </Menu>
       </Header>
     )
