@@ -4,7 +4,7 @@ import './assets/less/index.less'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
 
-// if (process.env.NODE_ENV !== 'dev') {
+// Disable logging in production
 if (process.env.REACT_APP_ENVIRONMENT !== 'prod') {
   localStorage.setItem('debug', 'thesource:*')
 }
