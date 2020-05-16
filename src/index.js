@@ -10,9 +10,8 @@ if (process.env.REACT_APP_ENVIRONMENT !== 'prod') {
 }
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+  <App />,
   document.getElementById('root'),
 )
 

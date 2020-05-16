@@ -1,5 +1,8 @@
 import React from 'react'
-import { Button } from 'antd'
+import { Layout } from 'antd'
+
+import Header from './components/layouts/Header'
+
 import Logger from './utils/logger'
 
 class App extends React.Component {
@@ -9,9 +12,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <Button type="primary">Button</Button>
-      </div>
+      <Layout>
+        <Header />
+      </Layout>
     )
   }
 }
