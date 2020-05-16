@@ -80,8 +80,8 @@ class HeaderWrapper extends React.Component {
         </div>
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['video']}>
           <Menu.Item key="video">영상</Menu.Item>
-          <Menu.Item key="audio">음악</Menu.Item>
           <Menu.Item key="image">이미지</Menu.Item>
+          <Menu.Item key="audio">음원</Menu.Item>
           <Menu.Item key="font">폰트</Menu.Item>
         </Menu>
       </Header>
