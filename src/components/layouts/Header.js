@@ -1,39 +1,17 @@
 import React from 'react'
-import { Layout, Menu, Input, Select } from 'antd'
+import { Layout } from 'antd'
 import { css } from 'emotion'
 
+import GnbSearch from '../header/GnbSearch'
+import GnbMenu from '../header/GnbMenu'
+
 import Logger from '../../utils/logger'
-import { contentNames } from '../../data/contentTypes'
 
 const { Header } = Layout
-const { Search } = Input
-const { Option } = Select
-
-const searchOption = Object.entries(contentNames).map((item) => (
-  <Option key={item[0]} value={item[0]}>
-    {item[1]}
-  </Option>
-))
-
-const menuItems = Object.entries(contentNames).map((item) => (
-  <Menu.Item key={item[0]}>{item[1]}</Menu.Item>
-))
-
-const selectBefore = <Select defaultValue="video">{searchOption}</Select>
 
 class HeaderWrapper extends React.Component {
-  constructor() {
-    super()
-
-    this.state = {
-      searching: false,
-    }
-  }
-
   render() {
     Logger.info('Header.js:render()', this)
-
-    const searching = this.state.searching
     return (
       <Header
         className={css`
@@ -57,34 +35,8 @@ class HeaderWrapper extends React.Component {
         >
           TheSource
         </h1>
-        <div
-          className={css`
-            display: flex;
-            margin: 0 1rem;
-            align-items: center;
-            justify-content: flex-start;
-          `}
-        >
-          {/* <Input addonBefore={selectBefore} defaultValue="" /> */}
-
-          <Search
-            addonBefore={selectBefore}
-            placeholder="검색하실 소스를 입력하세요."
-            enterButton="검색"
-            size="large"
-            onSearch={(value) => {
-              console.log(value)
-              this.setState({ searching: true })
-            }}
-            loading={searching}
-            className={css`
-              width: 400px;
-            `}
-          />
-        </div>
-        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['video']}>
-          {menuItems}
-        </Menu>
+        <GnbSearch />
+        <GnbMenu />
       </Header>
     )
   }
