@@ -20,7 +20,7 @@ class HeaderWrapper extends React.Component {
           justify-content: flex-start;
         `}
       >
-        <h1
+        <span
           className={`logo ${css`
             width: 160px;
             height: inherit;
@@ -34,7 +34,7 @@ class HeaderWrapper extends React.Component {
           `}`}
         >
           TheSource
-        </h1>
+        </span>
         <GnbSearch />
         <GnbMenu />
       </Header>

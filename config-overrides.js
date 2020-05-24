@@ -18,9 +18,9 @@ module.exports = {
       lessOptions: {
         javascriptEnabled: true,
         modifyVars: {
-          '@primary-color': 'black',
-          '@btn-primary-bg': '#333',
-          '@layout-header-background': 'black',
+          // '@primary-color': 'black',
+          // '@btn-primary-bg': '#333',
+          // '@layout-header-background': 'black',
         },
       },
     }),
