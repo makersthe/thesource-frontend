@@ -25,6 +25,7 @@ class HeaderWrapper extends React.Component {
             width: 160px;
             height: inherit;
             margin: 0;
+            margin-right: 1rem;
             float: left;
             font-family: 'Ubuntu', sans-serif;
             font-style: italic;
@@ -35,8 +36,8 @@ class HeaderWrapper extends React.Component {
         >
           TheSource
         </span>
-        <GnbSearch />
         <GnbMenu />
+        <GnbSearch />
       </Header>
     )
   }
