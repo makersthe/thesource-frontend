@@ -48,7 +48,7 @@ class FooterWrapper extends React.Component {
               float: left;
             `}
           >
-            <a href="copyright"> 저작권 정책 </a>
+            <a href="copyright">저작권 정책</a>
             <span> | </span>
           </li>
         </ul>
