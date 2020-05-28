@@ -14,7 +14,7 @@ const FooterList = styled.li`
   padding: 0 1rem;
   border-left: 1px solid #ccc;
 
-  :first-child {
+  :first-of-type {
     padding-left: 0;
     border-left: 0;
   }
