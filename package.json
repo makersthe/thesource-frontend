@@ -14,7 +14,8 @@
     "mobx-react-router": "^4.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.1"
+    "react-scripts": "^3.4.1",
+    "react-sizes": "^2.0.0"
   },
   "scripts": {
     "start": "cp ./.dev.env ./.env && react-app-rewired start",
