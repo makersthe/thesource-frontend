@@ -48,7 +48,6 @@ const FooterLabel = styled.label`
 `
 
 const FooterWrapper = () => {
-  Logger.info('Footer.js:render()', this)
   return (
     <Footer
       className={css`
