@@ -9,7 +9,7 @@ const menuItems = Object.entries(contentNames).map((item) => (
 
 const Gnb = () => {
   return (
-    <Menu theme="light" mode="horizontal" defaultSelectedKeys={['video']}>
+    <Menu theme="light" mode="horizontal" defaultSelectedKeys={['']}>
       {menuItems}
     </Menu>
   )

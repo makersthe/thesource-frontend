@@ -54,6 +54,7 @@ const FooterWrapper = () => {
         flex-direction: column;
         justify-content: center;
         align-content: center;
+        word-break: keep-all;
       `}
     >
       <ul
