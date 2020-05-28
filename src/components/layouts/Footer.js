@@ -3,8 +3,6 @@ import { Layout } from 'antd'
 import { css } from 'emotion'
 import styled from '@emotion/styled'
 
-import Logger from '../../utils/logger'
-
 const { Footer } = Layout
 
 const FooterList = styled.li`
