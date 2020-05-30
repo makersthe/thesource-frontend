@@ -4,6 +4,8 @@ import { css } from 'emotion'
 
 import { routes } from '../../data/routes'
 
+import Log from '../../utils/logger'
+
 const { Search } = Input
 const { Option } = Select
 
@@ -41,7 +43,7 @@ class GnbSearch extends React.Component {
           enterButton="검색"
           size="large"
           onSearch={(value) => {
-            console.log(value)
+            Log.info(`GNB Search: ${value}`)
             this.setState({ searching: true })
           }}
           loading={searching}

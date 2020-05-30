@@ -25,9 +25,9 @@ const Error404 = ({ location }) => {
 const RootRouter = withRouter(
   inject('globalStore')(
     observer((props) => {
-      Log.info('history', history)
+      Log.info('history', history, props)
 
-      const global = props.globalStore
+      // const global = props.globalStore
 
       const reactRouters = routes.map((item) => {
         return (
@@ -36,7 +36,7 @@ const RootRouter = withRouter(
             exact
             path={`/${item.url}`}
             render={() => {
-              global.move(`/${item.url}`)
+              // global.move(`/${item.url}`)
               return item.component
             }}
           />
@@ -50,7 +50,6 @@ const RootRouter = withRouter(
             path="/"
             key="/"
             render={() => {
-              global.move('/')
               return <Main />
             }}
           />
