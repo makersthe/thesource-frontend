@@ -2,8 +2,11 @@ import React from 'react'
 import { Layout } from 'antd'
 import { css } from 'emotion'
 
+import RootRouter from './routes/RootRouter'
 import Header from './components/layouts/Header'
 import Footer from './components/layouts/Footer'
+
+import { history } from './utils/history'
 
 const App = () => {
   return (
@@ -16,8 +19,9 @@ const App = () => {
           min-height: 100vh;
         `}
       >
-        <Footer />
+        <RootRouter history={history} />
       </Layout>
+      <Footer />
     </Layout>
   )
 }

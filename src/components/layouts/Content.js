@@ -1,21 +1,19 @@
 import React from 'react'
 import { Layout } from 'antd'
-import Logger from '../../utils/logger'
+import { css } from 'emotion'
 
-const { Header } = Layout
+import RootRouter from '../../routes/RootRouter'
 
-class HeaderWrapper extends React.Component {
-  componentDidMount() {
-    Logger.info('Header.js:componentDidMount()', this)
-  }
-
-  render() {
-    return (
-      <Layout className="layout">
-        <Header />
-      </Layout>
-    )
-  }
+const ContentWrapper = () => {
+  return (
+    <Layout
+      className={css`
+        padding: 1rem;
+      `}
+    >
+      <RootRouter />
+    </Layout>
+  )
 }
 
-export default HeaderWrapper
+export default ContentWrapper
