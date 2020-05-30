@@ -22,70 +22,70 @@ const Error404 = ({ location }) => {
   )
 }
 
-@inject('globalStore')
-@withRouter
-@observer
-class RootRouter extends React.Component {
-  render() {
-    Log.info('history', history)
+const RootRouter = withRouter(
+  inject('globalStore')(
+    observer((props) => {
+      Log.info('history', history)
 
-    const global = this.props.globalStore
+      const global = props.globalStore
 
-    const reactRouters = routes.map((item) => {
+      const reactRouters = routes.map((item) => {
+        return (
+          <Route
+            key={item.url}
+            exact
+            path={`/${item.url}`}
+            render={() => {
+              global.move(`/${item.url}`)
+              return item.component
+            }}
+          />
+        )
+      })
+
       return (
-        <Route
-          exact
-          path={`/${item.url}`}
-          render={() => {
-            global.move(`/${item.url}`)
-            return item.component
-          }}
-          key={item.url}
-        />
-      )
-    })
-    console.log(reactRouters)
+        <Switch history={history}>
+          <Route
+            exact
+            path="/"
+            key="/"
+            render={() => {
+              global.move('/')
+              return <Main />
+            }}
+          />
 
-    return (
-      <Switch history={history}>
-        <Route
-          exact
-          path="/"
-          render={() => {
-            global.move('/')
-            return <Main />
-          }}
-        />
+          {/* GNB */}
+          {reactRouters}
 
-        {/* GNB */}
-        {reactRouters}
-
-        {/* Logout */}
-        {/*
+          {/* Logout */}
+          {/*
         <Route
           exact
           path="/logout"
           render={() => {
-            this.props.authStore.logout()
+            props.authStore.logout()
             return <Redirect to="/" />
           }}
         />
         */}
 
-        {/* Redirect */}
-        <Route
-          exact
-          path="/sample"
-          render={() => {
-            return <Redirect to="/sample/redirection/path" />
-          }}
-        />
+          {/* Redirect */}
+          <Route
+            exact
+            path="/sample"
+            key="/sample"
+            render={() => {
+              return <Redirect to="/sample/redirection/path" />
+            }}
+          />
 
-        {/* Error */}
-        <Route component={Error404} />
-      </Switch>
-    )
-  }
-}
+          {/* Error */}
+          <Route kjjey="/404" component={Error404} />
+        </Switch>
+      )
+    }),
+  ),
+)
 
 export default RootRouter
