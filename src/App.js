@@ -22,7 +22,6 @@ const App = () => {
       >
         <RootRouter history={history} />
       </Layout>
-      <Content />
       <Footer />
     </Layout>
   )
