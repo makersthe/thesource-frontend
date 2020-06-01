@@ -1,4 +1,5 @@
 import React from 'react'
+<<<<<<< HEAD
 import { Pagination, Layout } from 'antd'
 import { css } from 'emotion'
 import Logger from '../../utils/logger'
@@ -76,6 +77,23 @@ class HeaderWrapper extends React.Component {
       </Content>
     )
   }
+=======
+import { Layout } from 'antd'
+import { css } from 'emotion'
+
+import RootRouter from '../../routes/RootRouter'
+
+const ContentWrapper = () => {
+  return (
+    <Layout
+      className={css`
+        padding: 1rem;
+      `}
+    >
+      <RootRouter />
+    </Layout>
+  )
+>>>>>>> eb8d9a525ed9b82b7b74eceed0609a302f54f960
 }
 
-export default HeaderWrapper
+export default ContentWrapper

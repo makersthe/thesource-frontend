@@ -2,19 +2,20 @@ import React from 'react'
 import { Input, Select } from 'antd'
 import { css } from 'emotion'
 
-import Logger from '../../utils/logger'
-import { contentNames } from '../../data/contentTypes'
+import { routes } from '../../data/routes'
+
+import Log from '../../utils/logger'
 
 const { Search } = Input
 const { Option } = Select
 
-const searchOption = Object.entries(contentNames).map((item) => (
-  <Option key={item[0]} value={item[0]}>
-    {item[1]}
+const searchOption = routes.map((item) => (
+  <Option key={item.url} value={item.url}>
+    {item.name}
   </Option>
 ))
 
-const selectBefore = <Select defaultValue="video">{searchOption}</Select>
+const selectBefore = <Select defaultValue="movies">{searchOption}</Select>
 
 class GnbSearch extends React.Component {
   constructor() {
@@ -27,7 +28,6 @@ class GnbSearch extends React.Component {
 
   render() {
     const searching = this.state.searching
-    Logger.info('GnbSearch.js:render()', this)
     return (
       <div
         className={css`
@@ -43,7 +43,7 @@ class GnbSearch extends React.Component {
           enterButton="검색"
           size="large"
           onSearch={(value) => {
-            console.log(value)
+            Log.info(`GNB Search: ${value}`)
             this.setState({ searching: true })
           }}
           loading={searching}

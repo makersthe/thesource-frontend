@@ -1,22 +1,26 @@
 import React from 'react'
+import { inject, observer } from 'mobx-react'
+
 import { Menu } from 'antd'
 
-import Logger from '../../utils/logger'
-import { contentNames } from '../../data/contentTypes'
+import { routes } from '../../data/routes'
 
-const menuItems = Object.entries(contentNames).map((item) => (
-  <Menu.Item key={item[0]}>{item[1]}</Menu.Item>
-))
+const Gnb = inject('routingStore')(
+  observer((props) => {
+    const { push } = props.routingStore
 
-class Gnb extends React.Component {
-  render() {
-    Logger.info('Gnb.js:render()', this)
+    const menuItems = routes.map((item) => (
+      <Menu.Item key={item.url} onClick={() => push(item.url)}>
+        {item.name}
+      </Menu.Item>
+    ))
+
     return (
-      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['video']}>
+      <Menu theme="light" mode="horizontal" defaultSelectedKeys={['']}>
         {menuItems}
       </Menu>
     )
-  }
-}
+  }),
+)
 
 export default Gnb

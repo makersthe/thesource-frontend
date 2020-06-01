@@ -11,3 +11,9 @@
 - React.js
 - MobX
 - Ant Design
+
+## Reference
+
+- [Ant Design](https://ant.design/)
+  - [Customizing Theme](https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less)
+- [react-sizes](https://github.com/renatorib/react-sizes)
