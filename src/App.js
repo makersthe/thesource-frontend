@@ -6,11 +6,6 @@ import RootRouter from './routes/RootRouter'
 import Header from './components/layouts/Header'
 import Content from './components/layouts/Content'
 import Footer from './components/layouts/Footer'
-<<<<<<< HEAD
-
-import Logger from './utils/logger'
-=======
->>>>>>> eb8d9a525ed9b82b7b74eceed0609a302f54f960
 
 import { history } from './utils/history'
 
@@ -19,11 +14,6 @@ const App = () => {
     <Layout>
       <Layout>
         <Header />
-<<<<<<< HEAD
-        <Content />
-        <Footer />
-=======
->>>>>>> eb8d9a525ed9b82b7b74eceed0609a302f54f960
       </Layout>
       <Layout
         className={css`
@@ -32,6 +22,7 @@ const App = () => {
       >
         <RootRouter history={history} />
       </Layout>
+      <Content />
       <Footer />
     </Layout>
   )
