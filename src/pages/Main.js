@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col } from 'antd'
+import { Row, Col, Divider } from 'antd'
 import styled from '@emotion/styled'
 
 const FlexRow = styled(Row)`
@@ -28,10 +28,12 @@ const Main = () => {
         <FlexCol span={12}>TEMP</FlexCol>
         <FlexCol span={12}>TEMP</FlexCol>
       </FlexRow>
+      <Divider />
       <FlexRow gutter={16} type="flex" justify="center">
         <FlexCol span={12}>TEMP</FlexCol>
         <FlexCol span={12}>TEMP</FlexCol>
       </FlexRow>
+      <Divider />
       <FlexRow gutter={16} type="flex" justify="center">
         <FlexCol span={24}>TEMP</FlexCol>
       </FlexRow>

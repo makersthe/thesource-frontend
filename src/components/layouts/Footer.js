@@ -65,19 +65,13 @@ const FooterWrapper = () => {
         `}
       >
         <FooterList>
-          <FooterLink href="https://thesource.co.kr/policy">
-            이용약관
-          </FooterLink>
+          <FooterLink href="lochost:3000/policy"> 이용약관 </FooterLink>
         </FooterList>
         <FooterList>
-          <FooterLink href="https://thesource.co.kr/privacy">
-            개인정보 보호정책
-          </FooterLink>
+          <FooterLink href="/privacy"> 개인정보 보호정책 </FooterLink>
         </FooterList>
         <FooterList>
-          <FooterLink href="https://thesource.co.kr/copyright">
-            저작권 정책
-          </FooterLink>
+          <FooterLink href="/copyright>"> 저작권 정책 </FooterLink>
         </FooterList>
       </ul>
       <FooterSpan>
