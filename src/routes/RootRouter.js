@@ -4,7 +4,10 @@ import { inject, observer } from 'mobx-react'
 import { history } from '../utils/history'
 import { routes } from '../data/routes'
 
-import Main from '../pages/Main'
+import Main from '../pages/Gnb/Main'
+import Policy from '../pages/Footer/Policy'
+import Privacy from '../pages/Footer/Privacy'
+import Copyright from '../pages/Footer/Copyright'
 
 import Log from '../utils/logger'
 
@@ -26,8 +29,6 @@ const RootRouter = withRouter(
   inject('globalStore')(
     observer((props) => {
       Log.info('history', history, props)
-
-      // const global = props.globalStore
 
       const reactRouters = routes.map((item) => {
         return (
@@ -57,6 +58,32 @@ const RootRouter = withRouter(
           {/* GNB */}
           {reactRouters}
 
+          {/* Footer */}
+          <Route
+            key="/policy"
+            exact
+            path="/policy"
+            render={() => {
+              return <Policy />
+            }}
+          />
+          <Route
+            key="/privacy"
+            exact
+            path="/privacy"
+            render={() => {
+              return <Privacy />
+            }}
+          />
+          <Route
+            key="/copyright"
+            exact
+            path="/copyright"
+            render={() => {
+              return <Copyright />
+            }}
+          />
+
           {/* Logout */}
           {/*
         <Route
@@ -80,7 +107,7 @@ const RootRouter = withRouter(
           />
 
           {/* Error */}
-          <Route kjjey="/404" component={Error404} />
+          <Route key="/404" component={Error404} />
         </Switch>
       )
     }),
