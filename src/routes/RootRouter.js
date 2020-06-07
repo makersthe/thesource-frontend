@@ -6,6 +6,8 @@ import { routes } from '../data/routes'
 
 import Main from '../pages/Main'
 import Policy from '../pages/Policy'
+import Privacy from '../pages/Privacy'
+import Copyright from '../pages/Copyright'
 
 import Log from '../utils/logger'
 
@@ -76,6 +78,24 @@ const RootRouter = withRouter(
             key="/policy"
             render={() => {
               return <Policy />
+            }}
+          />
+
+          <Route
+            exact
+            path="/privacy"
+            key="/privacy"
+            render={() => {
+              return <Privacy />
+            }}
+          />
+
+          <Route
+            exact
+            path="/copyright"
+            key="/copyright"
+            render={() => {
+              return <Copyright />
             }}
           />
           {/* Redirect */}
