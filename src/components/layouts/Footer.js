@@ -70,21 +70,23 @@ const FooterWrapper = inject('routingStore')(
           word-break: keep-all;
         `}
       >
-        <FooterList>
-          <FooterPageLink onClick={() => push('/policy')}>
-            이용약관
-          </FooterPageLink>
-        </FooterList>
-        <FooterList>
-          <FooterPageLink onClick={() => push('/policy')}>
-            개인정보 보호정책
-          </FooterPageLink>
-        </FooterList>
-        <FooterList>
-          <FooterPageLink onClick={() => push('/policy')}>
-            저작권 정책
-          </FooterPageLink>
-        </FooterList>
+        <ul>
+          <FooterList>
+            <FooterPageLink onClick={() => push('/policy')}>
+              이용약관
+            </FooterPageLink>
+          </FooterList>
+          <FooterList>
+            <FooterPageLink onClick={() => push('/policy')}>
+              개인정보 보호정책
+            </FooterPageLink>
+          </FooterList>
+          <FooterList>
+            <FooterPageLink onClick={() => push('/policy')}>
+              저작권 정책
+            </FooterPageLink>
+          </FooterList>
+        </ul>
         <FooterSpan>
           <FooterLabel>회사명</FooterLabel>메이커스디
           <FooterLabel
