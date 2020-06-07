@@ -1,4 +1,8 @@
-import { action, observable, spy } from 'mobx'
+import {
+  action,
+  observable,
+  // spy,
+} from 'mobx'
 import { message } from 'antd'
 import Log from '../utils/logger'
 
@@ -22,10 +26,11 @@ class GlobalStore {
 
 const globalStore = new GlobalStore()
 // MUSTFIX: Try another way to update currentPath store;
-spy((event) => {
-  if (event.type === 'action' && event.name === '_updateLocation') {
-    Log.info('Event', event)
-    globalStore.move(event.arguments[0].pathname)
-  }
-})
+// Spy only works in development mode
+// spy((event) => {
+//   if (event.type === 'action' && event.name === '_updateLocation') {
+//     Log.info('Event', event)
+//     globalStore.move(event.arguments[0].pathname)
+//   }
+// })
 export default globalStore

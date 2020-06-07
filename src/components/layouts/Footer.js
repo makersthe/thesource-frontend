@@ -1,6 +1,6 @@
 import React from 'react'
 import { inject, observer } from 'mobx-react'
-
+import { Link } from 'react-router-dom'
 import { Layout } from 'antd'
 import { css } from 'emotion'
 import styled from '@emotion/styled'
@@ -24,6 +24,14 @@ const FooterList = styled.li`
 `
 
 const FooterLink = styled.a`
+  color: #8c8c8c;
+
+  :hover {
+    color: #434343;
+    text-decoration: underline;
+  }
+`
+const FooterPageLink = styled(Link)`
   color: #8c8c8c;
 
   :hover {
@@ -62,27 +70,21 @@ const FooterWrapper = inject('routingStore')(
           word-break: keep-all;
         `}
       >
-        <ul
-          className={css`
-            padding: 0;
-            display: flex;
-            justify-content: center;
-          `}
-        >
-          <FooterList>
-            <FooterLink onClick={() => push('/policy')}>이용약관</FooterLink>
-          </FooterList>
-          <FooterList>
-            <FooterLink onClick={() => push('/privacy')}>
-              개인정보 보호정책
-            </FooterLink>
-          </FooterList>
-          <FooterList>
-            <FooterLink onClick={() => push('/copyright')}>
-              저작권 정책
-            </FooterLink>
-          </FooterList>
-        </ul>
+        <FooterList>
+          <FooterPageLink onClick={() => push('/policy')}>
+            이용약관
+          </FooterPageLink>
+        </FooterList>
+        <FooterList>
+          <FooterPageLink onClick={() => push('/policy')}>
+            개인정보 보호정책
+          </FooterPageLink>
+        </FooterList>
+        <FooterList>
+          <FooterPageLink onClick={() => push('/policy')}>
+            저작권 정책
+          </FooterPageLink>
+        </FooterList>
         <FooterSpan>
           <FooterLabel>회사명</FooterLabel>메이커스디
           <FooterLabel
@@ -114,7 +116,9 @@ const FooterWrapper = inject('routingStore')(
           제2019-서울중구-2199호
           <FooterLabel
             className={css`
-              margin-left: 1rem;
+              padding: 0;
+              display: flex;
+              justify-content: center;
             `}
           >
             저작권대리중개업신고
@@ -123,15 +127,18 @@ const FooterWrapper = inject('routingStore')(
         </FooterSpan>
         <FooterSpan>
           <FooterLabel>대표전화</FooterLabel>
-          <FooterLink href="tel:02-2254-1738">02)2254-1738</FooterLink>
+          <FooterLink href="tel:02-2254-1738" target="_blank">
+            02)2254-1738
+          </FooterLink>
           <FooterLabel
             className={css`
-              margin-left: 1rem;
+              display: block;
+              text-align: center;
             `}
           >
             이메일
           </FooterLabel>
-          <FooterLink href="mailto:contact@makersthe.com">
+          <FooterLink href="mailto:contact@makersthe.com" target="_blank">
             contact@makersthe.com
           </FooterLink>
         </FooterSpan>
