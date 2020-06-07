@@ -1,8 +1,8 @@
 import React from 'react'
-import Movies from '../pages/Movies'
-import Images from '../pages/Images'
-import Musics from '../pages/Musics'
-import Fonts from '../pages/Fonts'
+import Movies from '../pages/Gnb/Movies'
+import Images from '../pages/Gnb/Images'
+import Musics from '../pages/Gnb/Musics'
+import Fonts from '../pages/Gnb/Fonts'
 
 export const routes = [
   {

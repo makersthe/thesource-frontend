@@ -4,7 +4,7 @@ import { inject, observer } from 'mobx-react'
 import { history } from '../utils/history'
 import { routes } from '../data/routes'
 
-import Main from '../pages/Main'
+import Main from '../pages/Gnb/Main'
 
 import Log from '../utils/logger'
 
@@ -80,7 +80,7 @@ const RootRouter = withRouter(
           />
 
           {/* Error */}
-          <Route kjjey="/404" component={Error404} />
+          <Route key="/404" component={Error404} />
         </Switch>
       )
     }),
