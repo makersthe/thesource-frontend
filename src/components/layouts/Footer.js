@@ -1,5 +1,6 @@
 import React from 'react'
 import { inject, observer } from 'mobx-react'
+import { Link } from 'react-router-dom'
 import { Layout } from 'antd'
 import { css } from 'emotion'
 import styled from '@emotion/styled'
@@ -23,6 +24,14 @@ const FooterList = styled.li`
 `
 
 const FooterLink = styled.a`
+  color: #8c8c8c;
+
+  :hover {
+    color: #434343;
+    text-decoration: underline;
+  }
+`
+const FooterPageLink = styled(Link)`
   color: #8c8c8c;
 
   :hover {
@@ -68,17 +77,13 @@ const FooterWrapper = inject('routingStore')(
           `}
         >
           <FooterList>
-            <FooterLink onClick={() => push('/policy')}>이용약관</FooterLink>
+            <FooterPageLink to="/policy">이용약관</FooterPageLink>
           </FooterList>
           <FooterList>
-            <FooterLink onClick={() => push('/privacy')}>
-              개인정보 보호정책
-            </FooterLink>
+            <FooterPageLink to="/privacy">개인정보 보호정책</FooterPageLink>
           </FooterList>
           <FooterList>
-            <FooterLink onClick={() => push('/copyright')}>
-              저작권 정책
-            </FooterLink>
+            <FooterPageLink to="/copyright">저작권 정책</FooterPageLink>
           </FooterList>
         </ul>
         <FooterSpan>
@@ -121,7 +126,9 @@ const FooterWrapper = inject('routingStore')(
         </FooterSpan>
         <FooterSpan>
           <FooterLabel>대표전화</FooterLabel>
-          <FooterLink href="tel:02-2254-1738">02)2254-1738</FooterLink>
+          <FooterLink href="tel:02-2254-1738" target="_blank">
+            02)2254-1738
+          </FooterLink>
           <FooterLabel
             className={css`
               margin-left: 1rem;
@@ -129,7 +136,7 @@ const FooterWrapper = inject('routingStore')(
           >
             이메일
           </FooterLabel>
-          <FooterLink href="mailto:contact@makersthe.com">
+          <FooterLink href="mailto:contact@makersthe.com" target="_blank">
             contact@makersthe.com
           </FooterLink>
         </FooterSpan>
