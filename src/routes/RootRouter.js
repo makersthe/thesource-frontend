@@ -5,6 +5,7 @@ import { history } from '../utils/history'
 import { routes } from '../data/routes'
 
 import Main from '../pages/Main'
+import Policy from '../pages/Policy'
 
 import Log from '../utils/logger'
 
@@ -69,6 +70,14 @@ const RootRouter = withRouter(
         />
         */}
 
+          <Route
+            exact
+            path="/policy"
+            key="/policy"
+            render={() => {
+              return <Policy />
+            }}
+          />
           {/* Redirect */}
           <Route
             exact
