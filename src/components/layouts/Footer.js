@@ -70,19 +70,25 @@ const FooterWrapper = inject('routingStore')(
           word-break: keep-all;
         `}
       >
-        <ul>
+        <ul
+          className={css`
+            display: flex;
+            justify-content: center;
+            padding: 0px;
+          `}
+        >
           <FooterList>
             <FooterPageLink onClick={() => push('/policy')}>
               이용약관
             </FooterPageLink>
           </FooterList>
           <FooterList>
-            <FooterPageLink onClick={() => push('/policy')}>
+            <FooterPageLink onClick={() => push('/privacy')}>
               개인정보 보호정책
             </FooterPageLink>
           </FooterList>
           <FooterList>
-            <FooterPageLink onClick={() => push('/policy')}>
+            <FooterPageLink onClick={() => push('/copyright')}>
               저작권 정책
             </FooterPageLink>
           </FooterList>
