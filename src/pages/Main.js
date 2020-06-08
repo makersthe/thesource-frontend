@@ -77,7 +77,6 @@ const Main = () => {
       )),
     )
   }, [])
-  console.log(data)
 
   return (
     <div>
