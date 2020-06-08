@@ -13,6 +13,7 @@ const SliderRow = styled(Row)`
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: center;
   width: 100vw;
   height: 600px;
@@ -28,6 +29,7 @@ const FlexRow = styled(Row)`
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: center;
   width: 100%;
   @media (max-width: 700px) {
@@ -47,35 +49,37 @@ const FlexCol = styled(Col)`
 `
 
 const Main = () => {
-  const [data, setData] = useState([])
+  const [data, setData] = useState('')
 
-  useEffect(async () => {
+  async function fetchData() {
     const response = await axios(
       'https://picsum.photos/v2/list?page=1&limit=10',
     )
+    const dataElement = response.data?.map((item) => (
+      <Card
+        key={item.url}
+        className={css`
+          margin: 1rem !important;
+        `}
+        hoverable
+        cover={
+          <img
+            alt={item.author}
+            src={item.download_url}
+            style={{ objectFit: 'cover' }}
+            width="400px"
+            height="400px"
+          />
+        }
+      >
+        <Meta title={item.author} description="www.unsplash.com" />
+      </Card>
+    ))
+    setData(dataElement)
+  }
 
-    setData(
-      response.data.map((item) => (
-        <Card
-          key={item.url}
-          className={css`
-            margin: 1rem !important;
-          `}
-          hoverable
-          cover={
-            <img
-              alt={item.author}
-              src={item.download_url}
-              style={{ objectFit: 'cover' }}
-              width="400px"
-              height="400px"
-            />
-          }
-        >
-          <Meta title={item.author} description="www.unsplash.com" />
-        </Card>
-      )),
-    )
+  useEffect(() => {
+    fetchData()
   }, [])
 
   return (
@@ -92,51 +96,6 @@ const Main = () => {
           slidesPerPage={3}
         >
           {data}
-          {/* <Card
-            hoverable
-            className={css`
-              width: 400px;
-              margin: 2rem 3rem;
-            `}
-            cover={
-              <img
-                alt="example"
-                src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-              />
-            }
-          >
-            <Meta title="Europe Street beat" description="www.instagram.com" />
-          </Card>
-          <Card
-            hoverable
-            className={css`
-              width: 400px;
-              margin: 2rem 3rem;
-            `}
-            cover={
-              <img
-                alt="example"
-                src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-              />
-            }
-          >
-            <Meta title="Europe Street beat" description="www.instagram.com" />
-          </Card>
-          <Card
-            hoverable
-            className={css`
-              width: 400px;
-              margin: 2rem 3rem;
-            `}
-            cover={
-              <img
-                alt="example"
-                src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-              />
-            }
-          >
-            <Meta title="Europe Street beat" description="www.instagram.com" />
-          </Card> */}
         </Carousel>
       </SliderRow>
       <Divider />
