@@ -16,7 +16,11 @@ const App = () => {
       </Layout>
       <Layout
         className={css`
-          min-height: 100vh;
+          display: flex;
+          /* justify-content: center; */
+          align-items: center;
+          flex-flow: row wrap;
+          min-height: 100vh !important;
         `}
       >
         <RootRouter history={history} />

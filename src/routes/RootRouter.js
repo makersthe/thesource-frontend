@@ -4,7 +4,7 @@ import { inject, observer } from 'mobx-react'
 import { history } from '../utils/history'
 import { routes } from '../data/routes'
 
-import Main from '../pages/Gnb/Main'
+import Main from '../pages/Main'
 import Policy from '../pages/Footer/Policy'
 import Privacy from '../pages/Footer/Privacy'
 import Copyright from '../pages/Footer/Copyright'
