@@ -48,6 +48,7 @@ const HeaderWrapper = inject('routingStore')(
               text-decoration: none;
               font-weight: bolder;
               font-size: 2rem;
+              outline: none;
 
               :hover {
                 color: black;
