@@ -96,32 +96,6 @@ const RootRouter = withRouter(
         />
         */}
 
-          <Route
-            exact
-            path="/policy"
-            key="/policy"
-            render={() => {
-              return <Policy />
-            }}
-          />
-
-          <Route
-            exact
-            path="/privacy"
-            key="/privacy"
-            render={() => {
-              return <Privacy />
-            }}
-          />
-
-          <Route
-            exact
-            path="/copyright"
-            key="/copyright"
-            render={() => {
-              return <Copyright />
-            }}
-          />
           {/* Redirect */}
           <Route
             exact
