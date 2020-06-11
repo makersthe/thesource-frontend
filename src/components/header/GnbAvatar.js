@@ -21,7 +21,7 @@ const GnbAvatar = () => {
   return (
     <Tooltip placement="bottom" title="개발중입니다.">
       <Wrapper
-        href="#"
+        href="/login"
         onClick={() => {
           message.warning('개발중입니다.')
         }}

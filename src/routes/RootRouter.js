@@ -5,6 +5,10 @@ import { history } from '../utils/history'
 import { routes } from '../data/routes'
 
 import Main from '../pages/Main'
+
+import Login from '../pages/Auth/Login'
+import Signup from '../pages/Auth/Signup'
+
 import Policy from '../pages/Footer/Policy'
 import Privacy from '../pages/Footer/Privacy'
 import Copyright from '../pages/Footer/Copyright'
@@ -98,30 +102,22 @@ const RootRouter = withRouter(
 
           <Route
             exact
-            path="/policy"
-            key="/policy"
+            path="/login"
+            key="/login"
             render={() => {
-              return <Policy />
+              return <Login />
             }}
           />
 
           <Route
             exact
-            path="/privacy"
-            key="/privacy"
+            path="/signup"
+            key="/signup"
             render={() => {
-              return <Privacy />
+              return <Signup />
             }}
           />
 
-          <Route
-            exact
-            path="/copyright"
-            key="/copyright"
-            render={() => {
-              return <Copyright />
-            }}
-          />
           {/* Redirect */}
           <Route
             exact
