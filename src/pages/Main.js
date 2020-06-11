@@ -52,8 +52,8 @@ const Main = () => {
   const [data, setData] = useState('')
 
   async function fetchData() {
-    const response = await axios(
-      'https://picsum.photos/v2/list?page=1&limit=10',
+    const response = await axios.get(
+      'https://dev-admin.thesource.co.kr/markets/images',
     )
     const dataElement = response.data?.map((item) => (
       <Card

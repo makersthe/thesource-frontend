@@ -37,7 +37,7 @@ const Login = inject('routingStore')(
             <Input />
           </Form.Item>
           <Form.Item
-            label="Password"
+            label="password"
             name="password"
             rules={[{ required: true, message: '비밀번호를 입력하세요' }]}
           >

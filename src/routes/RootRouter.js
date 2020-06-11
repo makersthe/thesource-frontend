@@ -5,10 +5,10 @@ import { history } from '../utils/history'
 import { routes } from '../data/routes'
 
 import Main from '../pages/Main'
-
 import Policy from '../pages/Footer/Policy'
 import Privacy from '../pages/Footer/Privacy'
 import Copyright from '../pages/Footer/Copyright'
+import Login from '../pages/Auth/Login'
 
 import Log from '../utils/logger'
 
@@ -84,7 +84,14 @@ const RootRouter = withRouter(
               return <Copyright />
             }}
           />
-
+          <Route
+            key="/login"
+            exact
+            path="/login"
+            render={() => {
+              return <Login />
+            }}
+          />
           {/* Logout */}
           {/*
         <Route

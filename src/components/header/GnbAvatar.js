@@ -2,8 +2,9 @@ import React from 'react'
 import { Avatar, Tooltip, message } from 'antd'
 import { UserOutlined } from '@ant-design/icons'
 import styled from '@emotion/styled'
+import { Link } from 'react-router-dom'
 
-const Wrapper = styled.a`
+const Wrapper = styled(Link)`
   height: 64px;
   width: 64px;
   font-size: 1.2rem;
@@ -21,7 +22,7 @@ const GnbAvatar = () => {
   return (
     <Tooltip placement="bottom" title="개발중입니다.">
       <Wrapper
-        href="/login"
+        to="/login"
         onClick={() => {
           message.warning('개발중입니다.')
         }}
