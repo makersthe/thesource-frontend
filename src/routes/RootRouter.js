@@ -6,9 +6,6 @@ import { routes } from '../data/routes'
 
 import Main from '../pages/Main'
 
-import Login from '../pages/Auth/Login'
-import Signup from '../pages/Auth/Signup'
-
 import Policy from '../pages/Footer/Policy'
 import Privacy from '../pages/Footer/Privacy'
 import Copyright from '../pages/Footer/Copyright'
@@ -99,24 +96,6 @@ const RootRouter = withRouter(
           }}
         />
         */}
-
-          <Route
-            exact
-            path="/login"
-            key="/login"
-            render={() => {
-              return <Login />
-            }}
-          />
-
-          <Route
-            exact
-            path="/signup"
-            key="/signup"
-            render={() => {
-              return <Signup />
-            }}
-          />
 
           {/* Redirect */}
           <Route

@@ -1,5 +1,4 @@
 import React from 'react'
-import { inject, observer } from 'mobx-react'
 import { Link } from 'react-router-dom'
 import { Layout } from 'antd'
 import { css } from 'emotion'
@@ -55,112 +54,99 @@ const FooterLabel = styled.label`
    */
 `
 
-const FooterWrapper = inject('routingStore')(
-  observer((props) => {
-    const { push } = props.routingStore
-
-    return (
-      <Footer
+const FooterWrapper = () => {
+  return (
+    <Footer
+      className={css`
+        display: flex;
+        flex-flow: column wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        word-break: keep-all;
+      `}
+    >
+      <ul
         className={css`
+          padding: 0;
           display: flex;
-          flex-flow: column wrap;
-          flex-direction: column;
           justify-content: center;
-          align-content: center;
-          word-break: keep-all;
         `}
       >
-        <ul
+        <FooterList>
+          <FooterPageLink to="/policy">이용약관</FooterPageLink>
+        </FooterList>
+        <FooterList>
+          <FooterPageLink to="/privacy">개인정보 보호정책</FooterPageLink>
+        </FooterList>
+        <FooterList>
+          <FooterPageLink to="/copyright">저작권 정책</FooterPageLink>
+        </FooterList>
+      </ul>
+      <FooterSpan>
+        <FooterLabel>회사명</FooterLabel>메이커스디
+        <FooterLabel
           className={css`
-            display: flex;
-            justify-content: center;
-            padding: 0px;
+            margin-left: 1rem;
           `}
         >
-          <FooterList>
-            <FooterPageLink onClick={() => push('/policy')}>
-              이용약관
-            </FooterPageLink>
-          </FooterList>
-          <FooterList>
-            <FooterPageLink onClick={() => push('/privacy')}>
-              개인정보 보호정책
-            </FooterPageLink>
-          </FooterList>
-          <FooterList>
-            <FooterPageLink onClick={() => push('/copyright')}>
-              저작권 정책
-            </FooterPageLink>
-          </FooterList>
-        </ul>
-        <FooterSpan>
-          <FooterLabel>회사명</FooterLabel>메이커스디
-          <FooterLabel
-            className={css`
-              margin-left: 1rem;
-            `}
-          >
-            대표자명
-          </FooterLabel>
-          주현석
-          <FooterLabel
-            className={css`
-              margin-left: 1rem;
-            `}
-          >
-            주소
-          </FooterLabel>
-          서울 중구 충무로5가 19-10 215호
-        </FooterSpan>
-        <FooterSpan>
-          <FooterLabel>사업자등록번호</FooterLabel>452-61-00314
-          <FooterLabel
-            className={css`
-              margin-left: 1rem;
-            `}
-          >
-            통신판매업신고
-          </FooterLabel>
-          제2019-서울중구-2199호
-          <FooterLabel
-            className={css`
-              padding: 0;
-              display: flex;
-              justify-content: center;
-            `}
-          >
-            저작권대리중개업신고
-          </FooterLabel>
-          신고 제 1398호
-        </FooterSpan>
-        <FooterSpan>
-          <FooterLabel>대표전화</FooterLabel>
-          <FooterLink href="tel:02-2254-1738" target="_blank">
-            02)2254-1738
-          </FooterLink>
-          <FooterLabel
-            className={css`
-              display: block;
-              text-align: center;
-            `}
-          >
-            이메일
-          </FooterLabel>
-          <FooterLink href="mailto:contact@makersthe.com" target="_blank">
-            contact@makersthe.com
-          </FooterLink>
-        </FooterSpan>
-        <div
+          대표자명
+        </FooterLabel>
+        주현석
+        <FooterLabel
           className={css`
-            display: block;
-            text-align: center;
+            margin-left: 1rem;
           `}
         >
-          Copyright © Makersthe. All Rights Reserved.
-        </div>
-      </Footer>
-    )
-  }),
-)
+          주소
+        </FooterLabel>
+        서울 중구 충무로5가 19-10 215호
+      </FooterSpan>
+      <FooterSpan>
+        <FooterLabel>사업자등록번호</FooterLabel>452-61-00314
+        <FooterLabel
+          className={css`
+            margin-left: 1rem;
+          `}
+        >
+          통신판매업신고
+        </FooterLabel>
+        제2019-서울중구-2199호
+        <FooterLabel
+          className={css`
+            margin-left: 1rem;
+          `}
+        >
+          저작권대리중개업신고
+        </FooterLabel>
+        신고 제 1398호
+      </FooterSpan>
+      <FooterSpan>
+        <FooterLabel>대표전화</FooterLabel>
+        <FooterLink href="tel:02-2254-1738" target="_blank">
+          02)2254-1738
+        </FooterLink>
+        <FooterLabel
+          className={css`
+            margin-left: 1rem;
+          `}
+        >
+          이메일
+        </FooterLabel>
+        <FooterLink href="mailto:contact@makersthe.com" target="_blank">
+          contact@makersthe.com
+        </FooterLink>
+      </FooterSpan>
+      <div
+        className={css`
+          display: block;
+          text-align: center;
+        `}
+      >
+        Copyright © Makersthe. All Rights Reserved.
+      </div>
+    </Footer>
+  )
+}
 
 export default FooterWrapper
