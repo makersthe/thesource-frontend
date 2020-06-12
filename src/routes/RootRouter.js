@@ -9,6 +9,7 @@ import Policy from '../pages/Footer/Policy'
 import Privacy from '../pages/Footer/Privacy'
 import Copyright from '../pages/Footer/Copyright'
 import Login from '../pages/Auth/Login'
+import Signup from '../pages/Auth/Signup'
 
 import Log from '../utils/logger'
 
@@ -90,6 +91,14 @@ const RootRouter = withRouter(
             path="/login"
             render={() => {
               return <Login />
+            }}
+          />
+          <Route
+            key="/signup"
+            exact
+            path="/signup"
+            render={() => {
+              return <Signup />
             }}
           />
           {/* Logout */}
