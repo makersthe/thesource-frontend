@@ -52,27 +52,27 @@ const Main = () => {
   const [data, setData] = useState('')
 
   async function fetchData() {
-    const response = await axios.get(
-      'https://dev-admin.thesource.co.kr/markets/images',
+    const response = await axios(
+      'https://dev-admin.thesource.co.kr/markets/images/',
     )
     const dataElement = response.data?.map((item) => (
       <Card
-        key={item.url}
+        key={item.photo}
         className={css`
           margin: 1rem !important;
         `}
         hoverable
         cover={
           <img
-            alt={item.author}
-            src={item.download_url}
+            alt={item.username}
+            src={item.photo}
             style={{ objectFit: 'cover' }}
             width="400px"
             height="400px"
           />
         }
       >
-        <Meta title={item.author} description="www.unsplash.com" />
+        <Meta title={item.username} description={item.description} />
       </Card>
     ))
     setData(dataElement)
