@@ -99,6 +99,18 @@ const Main = () => {
         </Carousel>
       </SliderRow>
       <Divider />
+      <SliderRow gutter={16} type="flex" justify="center" align="top">
+        <Carousel
+          autoPlay={2000}
+          animationSpeed={2000}
+          infinite
+          centeredstopAutoPlayOnHover
+          draggable
+          slidesPerPage={4}
+        >
+          {data}
+        </Carousel>
+      </SliderRow>
       <FlexRow gutter={16} type="flex" justify="center" align="top">
         <FlexCol span={12}>TEMP</FlexCol>
         <FlexCol span={12}>TEMP</FlexCol>
