@@ -99,6 +99,7 @@ const Main = () => {
         </Carousel>
       </SliderRow>
       <Divider />
+      {/* 이미지 말고 영상 데이터 호출해 올것 */}
       <SliderRow gutter={16} type="flex" justify="center" align="top">
         <Carousel
           autoPlay={2000}
