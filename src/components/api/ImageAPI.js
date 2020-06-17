@@ -62,8 +62,8 @@ const ImageAPI = () => {
     <div>
       <SliderRow gutter={16} type="flex" justify="center" align="top">
         <Carousel
-          autoPlay={3000}
-          animationSpeed={2000}
+          autoPlay={2000}
+          animationSpeed={1000}
           infinite
           centered
           stopAutoPlayOnHover

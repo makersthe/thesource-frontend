@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Row, Card, Button } from 'antd'
+import { Row, Card } from 'antd'
 import Carousel from '@brainhubeu/react-carousel'
 import styled from '@emotion/styled'
 import { css } from 'emotion'
@@ -23,7 +23,6 @@ const SliderRow = styled(Row)`
     margin: 0 auto !important;
   }
 `
-
 
 const VideoAPI = () => {
   const [data, setData] = useState('')
@@ -75,15 +74,6 @@ const VideoAPI = () => {
           {data}
         </Carousel>
       </SliderRow>
-      <Button
-        className={css`
-          display: flex;
-          justify: center;
-          text-align: center;
-        `}
-      >
-        더보기+
-      </Button>
     </div>
   )
 }
