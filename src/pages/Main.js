@@ -1,12 +1,21 @@
 import React from 'react'
 import { Row, Col, Divider } from 'antd'
 import styled from '@emotion/styled'
-import '@brainhubeu/react-carousel/lib/style.css'
+// import '../components/carousel/node_modules/@brainhubeu/react-carousel/lib/style.css'
 
-import AudioAPI from '../components/api/AudioAPI'
-import ImageAPI from '../components/api/ImageAPI'
-import VideoAPI from '../components/api/VideoAPI'
+import AudioCarousel from '../components/carousel/AudioCarousel'
+import ImageCarousel from '../components/carousel/ImageCarousel'
+import VideoCarousel from '../components/carousel/VideoCarousel'
 
+const Wrapper = styled.div`
+  max-width: 1260px;
+  margin: 2rem 3rem;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+`
 const FlexRow = styled(Row)`
   max-width: 1260px;
   margin: 2rem 3rem;
@@ -35,17 +44,20 @@ const FlexCol = styled(Col)`
 const Main = () => {
   return (
     <div>
-      <VideoAPI />
-      <AudioAPI />
-      <ImageAPI />
-      <FlexRow gutter={16} type="flex" justify="center" align="top">
-        <FlexCol span={12}>TEMP</FlexCol>
-        <FlexCol span={12}>TEMP</FlexCol>
-      </FlexRow>
-      <Divider />
-      <FlexRow gutter={16} type="flex" justify="center" align="top">
-        <FlexCol span={24}>TEMP</FlexCol>
-      </FlexRow>
+      <VideoCarousel />
+      <AudioCarousel />
+      <ImageCarousel />
+
+      <Wrapper>
+        <FlexRow gutter={16} type="flex" justify="center" align="top">
+          {/* <FlexCol span={12}>TEMP</FlexCol>
+        <FlexCol span={12}>TEMP</FlexCol> */}
+        </FlexRow>
+        <Divider />
+        <FlexRow gutter={16} type="flex" justify="center" align="top">
+          <FlexCol span={24}>준비중입니다.</FlexCol>
+        </FlexRow>
+      </Wrapper>
     </div>
   )
 }

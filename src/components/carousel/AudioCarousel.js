@@ -24,31 +24,31 @@ const SliderRow = styled(Row)`
   }
 `
 
-const ImageAPI = () => {
+const AudioAPI = () => {
   const [data, setData] = useState('')
 
   async function fetchData() {
     const responseImage = await axios(
-      'https://dev-admin.thesource.co.kr/markets/images/',
+      'https://dev-admin.thesource.co.kr/markets/audios/',
     )
     const dataElement = responseImage.data?.map((item) => (
       <Card
-        key={item.photo}
+        key={item.id}
         className={css`
           margin: 1rem !important;
         `}
         hoverable
         cover={
           <img
-            alt={item.username}
-            src={item.photo}
+            alt={item.cover}
+            src={`https://dev-admin.thesource.co.kr${item.cover_image}`}
             style={{ objectFit: 'cover' }}
             width="400px"
             height="400px"
           />
         }
       >
-        <Meta title={item.username} description={item.description} />
+        <Meta title={item.title} description={item.description} />
       </Card>
     ))
     setData(dataElement)
@@ -62,8 +62,8 @@ const ImageAPI = () => {
     <div>
       <SliderRow gutter={16} type="flex" justify="center" align="top">
         <Carousel
-          autoPlay={2000}
-          animationSpeed={1000}
+          autoPlay={3000}
+          animationSpeed={2000}
           infinite
           centered
           stopAutoPlayOnHover
@@ -78,4 +78,4 @@ const ImageAPI = () => {
   )
 }
 
-export default ImageAPI
+export default AudioAPI

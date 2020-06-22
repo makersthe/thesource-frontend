@@ -24,24 +24,24 @@ const SliderRow = styled(Row)`
   }
 `
 
-const AudioAPI = () => {
+const VideoAPI = () => {
   const [data, setData] = useState('')
 
   async function fetchData() {
     const responseImage = await axios(
-      'https://dev-admin.thesource.co.kr/markets/audios/',
+      'https://dev-admin.thesource.co.kr/markets/videos/',
     )
     const dataElement = responseImage.data?.map((item) => (
       <Card
-        key={item.audio}
+        key={item.id}
         className={css`
           margin: 1rem !important;
         `}
         hoverable
         cover={
           <img
-            alt={item.cover}
-            src={item.cover_image}
+            alt={item.username}
+            src={`https://dev-admin.thesource.co.kr${item.video_thumbnail}`}
             style={{ objectFit: 'cover' }}
             width="400px"
             height="400px"
@@ -78,4 +78,4 @@ const AudioAPI = () => {
   )
 }
 
-export default AudioAPI
+export default VideoAPI

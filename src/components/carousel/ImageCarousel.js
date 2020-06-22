@@ -24,16 +24,16 @@ const SliderRow = styled(Row)`
   }
 `
 
-const VideoAPI = () => {
+const ImageAPI = () => {
   const [data, setData] = useState('')
 
   async function fetchData() {
     const responseImage = await axios(
-      'https://dev-admin.thesource.co.kr/markets/videos/',
+      'https://dev-admin.thesource.co.kr/markets/images/',
     )
     const dataElement = responseImage.data?.map((item) => (
       <Card
-        key={item.video}
+        key={item.id}
         className={css`
           margin: 1rem !important;
         `}
@@ -41,7 +41,7 @@ const VideoAPI = () => {
         cover={
           <img
             alt={item.username}
-            src={item.video_thumbnail}
+            src={`https://dev-admin.thesource.co.kr${item.photo}`}
             style={{ objectFit: 'cover' }}
             width="400px"
             height="400px"
@@ -62,8 +62,8 @@ const VideoAPI = () => {
     <div>
       <SliderRow gutter={16} type="flex" justify="center" align="top">
         <Carousel
-          autoPlay={3000}
-          animationSpeed={2000}
+          autoPlay={2000}
+          animationSpeed={1000}
           infinite
           centered
           stopAutoPlayOnHover
@@ -78,4 +78,4 @@ const VideoAPI = () => {
   )
 }
 
-export default VideoAPI
+export default ImageAPI
