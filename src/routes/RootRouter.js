@@ -62,7 +62,7 @@ const RootRouter = withRouter(
           {gnbRouters}
 
           {/* 상세페이지 */}
-          <Route exact path="/videos/:id" component={VideoDetail} />
+          <Route exact path="/video/:id" component={VideoDetail} />
 
           {/* Footer */}
           <Route

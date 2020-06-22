@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { Row, Card } from 'antd'
 import Carousel from '@brainhubeu/react-carousel'
 import styled from '@emotion/styled'
@@ -32,24 +33,26 @@ const VideoCarousel = () => {
       'https://dev-admin.thesource.co.kr/markets/videos/',
     )
     const dataElement = responseImage.data?.map((item) => (
-      <Card
-        key={item.id}
-        className={css`
-          margin: 1rem !important;
-        `}
-        hoverable
-        cover={
-          <img
-            alt={item.username}
-            src={`https://dev-admin.thesource.co.kr${item.video_thumbnail}`}
-            style={{ objectFit: 'cover' }}
-            width="400px"
-            height="400px"
-          />
-        }
-      >
-        <Meta title={item.title} description={item.description} />
-      </Card>
+      <Link to={`/video/${item.id}`}>
+        <Card
+          key={item.id}
+          className={css`
+            margin: 1rem !important;
+          `}
+          hoverable
+          cover={
+            <img
+              alt={item.username}
+              src={`https://dev-admin.thesource.co.kr${item.video_thumbnail}`}
+              style={{ objectFit: 'cover' }}
+              width="400px"
+              height="400px"
+            />
+          }
+        >
+          <Meta title={item.title} description={item.description} />
+        </Card>
+      </Link>
     ))
     setData(dataElement)
   }
