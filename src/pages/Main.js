@@ -1,5 +1,10 @@
 import React from 'react'
-import { Row, Col, Divider, Typography } from 'antd'
+import {
+  Row,
+  // Col,
+  Divider,
+  Typography,
+} from 'antd'
 import styled from '@emotion/styled'
 // import '../components/carousel/node_modules/@brainhubeu/react-carousel/lib/style.css'
 
@@ -32,16 +37,16 @@ const FlexRow = styled(Row)`
     margin: 0 auto !important;
   }
 `
-const FlexCol = styled(Col)`
-  margin-top: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @media (max-width: 700px) {
-    max-width: 100%;
-    padding: 0 !important;
-  }
-`
+// const FlexCol = styled(Col)`
+//   margin-top: 1rem;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   @media (max-width: 700px) {
+//     max-width: 100%;
+//     padding: 0 !important;
+//   }
+// `
 const Main = () => {
   return (
     <div>

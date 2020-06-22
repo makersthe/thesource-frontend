@@ -24,7 +24,7 @@ const SliderRow = styled(Row)`
   }
 `
 
-const VideoAPI = () => {
+const VideoCarousel = () => {
   const [data, setData] = useState('')
 
   async function fetchData() {
@@ -78,4 +78,4 @@ const VideoAPI = () => {
   )
 }
 
-export default VideoAPI
+export default VideoCarousel

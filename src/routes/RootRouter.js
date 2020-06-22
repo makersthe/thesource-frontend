@@ -5,6 +5,7 @@ import { history } from '../utils/history'
 import { routes } from '../data/routes'
 
 import Main from '../pages/Main'
+import VideoDetail from '../pages/Detail/VideoDetail'
 import Policy from '../pages/Footer/Policy'
 import Privacy from '../pages/Footer/Privacy'
 import Copyright from '../pages/Footer/Copyright'
@@ -32,7 +33,7 @@ const RootRouter = withRouter(
     observer((props) => {
       Log.info('history', history, props)
 
-      const reactRouters = routes.map((item) => {
+      const gnbRouters = routes.map((item) => {
         return (
           <Route
             key={item.url}
@@ -58,7 +59,10 @@ const RootRouter = withRouter(
           />
 
           {/* GNB */}
-          {reactRouters}
+          {gnbRouters}
+
+          {/* 상세페이지 */}
+          <Route exact path="/videos/:id" component={VideoDetail} />
 
           {/* Footer */}
           <Route

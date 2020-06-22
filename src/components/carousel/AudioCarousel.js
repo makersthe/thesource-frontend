@@ -24,7 +24,7 @@ const SliderRow = styled(Row)`
   }
 `
 
-const AudioAPI = () => {
+const AudioCarousel = () => {
   const [data, setData] = useState('')
 
   async function fetchData() {
@@ -78,4 +78,4 @@ const AudioAPI = () => {
   )
 }
 
-export default AudioAPI
+export default AudioCarousel

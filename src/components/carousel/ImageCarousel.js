@@ -24,7 +24,7 @@ const SliderRow = styled(Row)`
   }
 `
 
-const ImageAPI = () => {
+const ImageCarousel = () => {
   const [data, setData] = useState('')
 
   async function fetchData() {
@@ -78,4 +78,4 @@ const ImageAPI = () => {
   )
 }
 
-export default ImageAPI
+export default ImageCarousel
