@@ -15,7 +15,7 @@ const searchOption = routes.map((item) => (
   </Option>
 ))
 
-const selectBefore = <Select defaultValue="movies">{searchOption}</Select>
+const selectBefore = <Select defaultValue="videos">{searchOption}</Select>
 
 class GnbSearch extends React.Component {
   constructor() {

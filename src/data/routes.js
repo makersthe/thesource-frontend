@@ -1,15 +1,15 @@
 import React from 'react'
-import Movies from '../pages/Movies'
+import Videos from '../pages/Videos'
 import Images from '../pages/Images'
-import Musics from '../pages/Musics'
+import Audios from '../pages/Audios'
 import Fonts from '../pages/Fonts'
 
 export const routes = [
   {
-    contentType: 'movie',
-    url: 'movies',
+    contentType: 'videos',
+    url: 'videos',
     name: '영상',
-    component: <Movies />,
+    component: <Videos />,
   },
   {
     contentType: 'image',
@@ -18,10 +18,10 @@ export const routes = [
     component: <Images />,
   },
   {
-    contentType: 'music',
-    url: 'musics',
+    contentType: 'audios',
+    url: 'audios',
     name: '음원',
-    component: <Musics />,
+    component: <Audios />,
   },
   {
     contentType: 'font',
