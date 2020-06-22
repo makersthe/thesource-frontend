@@ -1,11 +1,13 @@
 import React from 'react'
-import { Row, Col, Divider } from 'antd'
+import { Row, Col, Divider, Typography } from 'antd'
 import styled from '@emotion/styled'
 // import '../components/carousel/node_modules/@brainhubeu/react-carousel/lib/style.css'
 
 import AudioCarousel from '../components/carousel/AudioCarousel'
 import ImageCarousel from '../components/carousel/ImageCarousel'
 import VideoCarousel from '../components/carousel/VideoCarousel'
+
+const { Title } = Typography
 
 const Wrapper = styled.div`
   max-width: 1260px;
@@ -40,12 +42,20 @@ const FlexCol = styled(Col)`
     padding: 0 !important;
   }
 `
-
 const Main = () => {
   return (
     <div>
+      <Divider>
+        <Title level={2}>영상</Title>
+      </Divider>
       <VideoCarousel />
+      <Divider>
+        <Title level={2}>음원</Title>
+      </Divider>
       <AudioCarousel />
+      <Divider>
+        <Title level={2}>이미지</Title>
+      </Divider>
       <ImageCarousel />
 
       <Wrapper>
@@ -54,9 +64,9 @@ const Main = () => {
         <FlexCol span={12}>TEMP</FlexCol> */}
         </FlexRow>
         <Divider />
-        <FlexRow gutter={16} type="flex" justify="center" align="top">
+        {/* <FlexRow gutter={16} type="flex" justify="center" align="top">
           <FlexCol span={24}>준비중입니다.</FlexCol>
-        </FlexRow>
+        </FlexRow> */}
       </Wrapper>
     </div>
   )
