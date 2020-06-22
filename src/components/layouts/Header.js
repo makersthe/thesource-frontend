@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { inject, observer } from 'mobx-react'
 import { Layout } from 'antd'
 import { css, cx } from 'emotion'
@@ -29,13 +30,11 @@ const RightWrapper = styled.div`
 `
 
 const HeaderWrapper = inject('routingStore')(
-  observer((props) => {
-    const { push } = props.routingStore
-
+  observer(() => {
     return (
       <Header className={cx('header', headerWrapperStyle)}>
         <LeftWrapper>
-          <span
+          <Link
             className={css`
               width: 160px;
               height: inherit;
@@ -54,13 +53,13 @@ const HeaderWrapper = inject('routingStore')(
                 color: black;
               }
             `}
-            onClick={() => push('/')}
+            to="/"
             onKeyPress={null}
             role="link"
             tabIndex={0}
           >
             TheSource
-          </span>
+          </Link>
           <GnbMenu />
         </LeftWrapper>
         <RightWrapper>
