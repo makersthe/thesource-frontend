@@ -14,7 +14,7 @@ const Gnb = inject('routingStore')(
     ))
 
     const pathname = props.routingStore.location.pathname
-    const currentTab = pathname.split('/')[1]
+    const currentTab = `/${pathname.split('/')[1]}`
 
     return (
       <Menu

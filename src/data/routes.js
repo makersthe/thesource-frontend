@@ -7,25 +7,25 @@ import Fonts from '../pages/Fonts'
 export const routes = [
   {
     contentType: 'videos',
-    url: 'videos',
+    url: '/videos',
     name: '영상',
     component: <Videos />,
   },
   {
     contentType: 'image',
-    url: 'images',
+    url: '/images',
     name: '이미지',
     component: <Images />,
   },
   {
     contentType: 'audios',
-    url: 'audios',
+    url: '/audios',
     name: '음원',
     component: <Audios />,
   },
   {
     contentType: 'font',
-    url: 'fonts',
+    url: '/fonts',
     name: '폰트',
     component: <Fonts />,
   },

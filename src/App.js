@@ -17,8 +17,8 @@ const App = () => {
       <Layout
         className={css`
           display: flex;
-          /* justify-content: center; */
           align-items: center;
+          justify-content: center;
           flex-flow: row wrap;
           min-height: 100vh !important;
         `}

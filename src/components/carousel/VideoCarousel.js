@@ -33,7 +33,7 @@ const VideoCarousel = () => {
       'https://dev-admin.thesource.co.kr/markets/videos/',
     )
     const dataElement = responseImage.data?.map((item) => (
-      <Link to={`/video/${item.id}`}>
+      <Link to={`/videos/${item.id}`}>
         <Card
           key={item.id}
           className={css`
