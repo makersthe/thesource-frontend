@@ -11,6 +11,7 @@ import styled from '@emotion/styled'
 import AudioCarousel from '../components/carousel/AudioCarousel'
 import ImageCarousel from '../components/carousel/ImageCarousel'
 import VideoCarousel from '../components/carousel/VideoCarousel'
+import Banner from '../components/carousel/Banner'
 
 const { Title } = Typography
 
@@ -50,6 +51,7 @@ const FlexRow = styled(Row)`
 const Main = () => {
   return (
     <div>
+      <Banner />
       <Divider>
         <Title level={2}>영상</Title>
       </Divider>

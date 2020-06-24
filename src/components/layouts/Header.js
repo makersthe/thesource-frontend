@@ -63,7 +63,7 @@ const HeaderWrapper = inject('routingStore')(
           <GnbMenu />
         </LeftWrapper>
         <RightWrapper>
-          <GnbSearch />
+          {/* <GnbSearch /> */}
           <GnbHelp />
           <GnbCart />
           <GnbAvatar />
