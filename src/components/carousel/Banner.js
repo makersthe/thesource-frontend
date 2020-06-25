@@ -1,18 +1,20 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import bannerImg from '../../assets/images/bridge.jpg'
+import bannerImg from '../../assets/images/sky.jpg'
 import GnbSearch from '../header/GnbSearch'
 
 const Container = styled.div`
-  display: block;
   width: 100%;
-  height: 60vh;
-  background: url('../../assets/images/bridge.jpg');
+  height: 80vh;
+  background: url(${bannerImg}) no-repeat;
+  background-size: cover;
 `
 const SearchContainer = styled.div`
   display: flex;
+  padding-top: 40vh;
   justify-content: center;
   aligne-items: center;
+
 `
 
 const Banner = () => {
