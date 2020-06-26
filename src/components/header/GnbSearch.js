@@ -31,8 +31,9 @@ class GnbSearch extends React.Component {
     return (
       <div
         className={css`
+          width: 500px;
           display: flex;
-          margin: 0 1rem;
+          margin: 0 3rem;
           align-items: center;
           justify-content: flex-start;
         `}

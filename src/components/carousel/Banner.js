@@ -5,16 +5,15 @@ import GnbSearch from '../header/GnbSearch'
 
 const Container = styled.div`
   width: 100%;
-  height: 80vh;
+  height: 60vh;
   background: url(${bannerImg}) no-repeat;
   background-size: cover;
 `
 const SearchContainer = styled.div`
   display: flex;
-  padding-top: 40vh;
+  padding-top: 30vh;
   justify-content: center;
   aligne-items: center;
-
 `
 
 const Banner = () => {
