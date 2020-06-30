@@ -39,6 +39,9 @@ class GnbSearch extends React.Component {
         `}
       >
         <Search
+          className={css`
+            width: 500px;
+          `}
           addonBefore={selectBefore}
           placeholder="검색하실 소스를 입력하세요."
           enterButton="검색"
@@ -48,9 +51,6 @@ class GnbSearch extends React.Component {
             this.setState({ searching: true })
           }}
           loading={searching}
-          className={css`
-            width: 400px;
-          `}
         />
       </div>
     )
