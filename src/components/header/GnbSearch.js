@@ -10,7 +10,7 @@ const { Search } = Input
 const { Option } = Select
 
 const searchOption = routes.map((item) => (
-  <Option key={item.url} value={item.url}>
+  <Option key={item.contentType} value={item.contentType}>
     {item.name}
   </Option>
 ))

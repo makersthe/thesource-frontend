@@ -38,7 +38,7 @@ const RootRouter = withRouter(
           <Route
             key={item.url}
             exact
-            path={`/${item.url}`}
+            path={`${item.url}`}
             render={() => {
               // global.move(`/${item.url}`)
               return item.component

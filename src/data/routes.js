@@ -12,7 +12,7 @@ export const routes = [
     component: <Videos />,
   },
   {
-    contentType: 'image',
+    contentType: 'images',
     url: '/images',
     name: '이미지',
     component: <Images />,
@@ -24,7 +24,7 @@ export const routes = [
     component: <Audios />,
   },
   {
-    contentType: 'font',
+    contentType: 'fonts',
     url: '/fonts',
     name: '폰트',
     component: <Fonts />,
