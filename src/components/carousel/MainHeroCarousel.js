@@ -8,24 +8,18 @@ const Container = styled.div`
   height: 60vh;
   background: url(${bannerImg}) no-repeat;
   background-size: cover;
-`
-const SearchContainer = styled.div`
   display: flex;
-  padding-top: 30vh;
   justify-content: center;
-  aligne-items: center;
+  align-items: center;
 `
 
-const Banner = () => {
+const MainHero = () => {
+  // TODO: Carousel 같이 배경 전환
   return (
-    <div>
-      <Container>
-        <SearchContainer>
-          <GnbSearch />
-        </SearchContainer>
-      </Container>
-    </div>
+    <Container>
+      <GnbSearch />
+    </Container>
   )
 }
 
-export default Banner
+export default MainHero

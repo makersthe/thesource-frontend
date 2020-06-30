@@ -11,7 +11,7 @@ import styled from '@emotion/styled'
 import AudioCarousel from '../components/carousel/AudioCarousel'
 import ImageCarousel from '../components/carousel/ImageCarousel'
 import VideoCarousel from '../components/carousel/VideoCarousel'
-import Banner from '../components/carousel/Banner'
+import MainHeroCarousel from '../components/carousel/MainHeroCarousel'
 
 const { Title } = Typography
 
@@ -38,20 +38,10 @@ const FlexRow = styled(Row)`
     margin: 0 auto !important;
   }
 `
-// const FlexCol = styled(Col)`
-//   margin-top: 1rem;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   @media (max-width: 700px) {
-//     max-width: 100%;
-//     padding: 0 !important;
-//   }
-// `
 const Main = () => {
   return (
     <div>
-      <Banner />
+      <MainHeroCarousel />
       <Divider>
         <Title level={2}>영상</Title>
       </Divider>
@@ -66,14 +56,8 @@ const Main = () => {
       <ImageCarousel />
 
       <Wrapper>
-        <FlexRow gutter={16} type="flex" justify="center" align="top">
-          {/* <FlexCol span={12}>TEMP</FlexCol>
-        <FlexCol span={12}>TEMP</FlexCol> */}
-        </FlexRow>
+        <FlexRow gutter={16} type="flex" justify="center" align="top" />
         <Divider />
-        {/* <FlexRow gutter={16} type="flex" justify="center" align="top">
-          <FlexCol span={24}>준비중입니다.</FlexCol>
-        </FlexRow> */}
       </Wrapper>
     </div>
   )
