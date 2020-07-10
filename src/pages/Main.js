@@ -5,6 +5,7 @@ import {
   Divider,
   Typography,
 } from 'antd'
+import { css } from 'emotion'
 import styled from '@emotion/styled'
 // import '../components/carousel/node_modules/@brainhubeu/react-carousel/lib/style.css'
 
@@ -12,6 +13,7 @@ import AudioCarousel from '../components/carousel/AudioCarousel'
 import ImageCarousel from '../components/carousel/ImageCarousel'
 import VideoCarousel from '../components/carousel/VideoCarousel'
 import Banner from '../components/carousel/Banner'
+import Manual from '../components/Manual'
 
 const { Title } = Typography
 
@@ -50,25 +52,33 @@ const FlexRow = styled(Row)`
 // `
 const Main = () => {
   return (
-    <div>
+    <div
+      className={css`
+        background: #fff;
+      `}
+    >
       <Banner />
       <Divider>
-        <Title level={2}>영상</Title>
+        <Title level={2}>영상 저작권 컨텐츠</Title>
       </Divider>
       <VideoCarousel />
       <Divider>
-        <Title level={2}>음원</Title>
+        <Title level={2}>음원 저작권 컨텐츠</Title>
       </Divider>
       <AudioCarousel />
       <Divider>
-        <Title level={2}>이미지</Title>
+        <Title level={2}>이미지 저작권 컨텐츠</Title>
       </Divider>
       <ImageCarousel />
-
+      <Divider>
+        <Title level={2}>디소스 사용 매뉴얼</Title>
+      </Divider>
+      <Manual />
       <Wrapper>
         <FlexRow gutter={16} type="flex" justify="center" align="top">
-          {/* <FlexCol span={12}>TEMP</FlexCol>
-        <FlexCol span={12}>TEMP</FlexCol> */}
+          {/* <FlexRow gutter={16} type="flex" justify="center" align="top">
+          <FlexCol span={24}>준비중입니다.</FlexCol>
+          </FlexRow> */}
         </FlexRow>
         <Divider />
         {/* <FlexRow gutter={16} type="flex" justify="center" align="top">
