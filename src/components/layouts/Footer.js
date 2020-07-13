@@ -74,6 +74,12 @@ const FooterWrapper = () => {
         `}
       >
         <FooterList>
+          <FooterPageLink>언론 / 미디어</FooterPageLink>
+        </FooterList>
+        <FooterList>
+          <FooterPageLink>채용</FooterPageLink>
+        </FooterList>
+        <FooterList>
           <FooterPageLink to="/policy">이용약관</FooterPageLink>
         </FooterList>
         <FooterList>
