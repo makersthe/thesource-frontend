@@ -6,6 +6,7 @@ import GnbSearch from '../header/GnbSearch'
 const Container = styled.div`
   width: 100%;
   height: 60vh;
+  margin-bottom: 50px;
   background: url(${bannerImg}) no-repeat;
   background-size: cover;
   display: flex;
