@@ -5,7 +5,7 @@ import { Layout } from 'antd'
 import { css, cx } from 'emotion'
 import styled from '@emotion/styled'
 
-import GnbSearch from '../header/GnbSearch'
+// import GnbSearch from '../header/GnbSearch'
 import GnbMenu from '../header/GnbMenu'
 import GnbHelp from '../header/GnbHelp'
 import GnbCart from '../header/GnbCart'
@@ -63,7 +63,7 @@ const HeaderWrapper = inject('routingStore')(
           <GnbMenu />
         </LeftWrapper>
         <RightWrapper>
-          <GnbSearch />
+          {/* <GnbSearch /> */}
           <GnbHelp />
           <GnbCart />
           <GnbAvatar />

@@ -36,10 +36,6 @@ class GnbSearch extends React.Component {
           margin: 0 3rem;
           align-items: center;
           justify-content: flex-start;
-          @media (max-width: 485px) {
-            max-width: 100%;
-            margin: 0 auto !important;
-          }
         `}
       >
         <Search

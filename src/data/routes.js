@@ -3,8 +3,6 @@ import Videos from '../pages/Videos'
 import Images from '../pages/Images'
 import Audios from '../pages/Audios'
 import Fonts from '../pages/Fonts'
-import Primiere from '../pages/Primiere'
-import AfterEffect from '../pages/AfterEffect'
 
 export const routes = [
   {
@@ -30,18 +28,6 @@ export const routes = [
     url: '/fonts',
     name: '폰트',
     component: <Fonts />,
-  },
-  {
-    contentType: 'Primiere',
-    url: '/Pres',
-    name: '프리미어',
-    component: <Primiere />,
-  },
-  {
-    contentType: 'AfterEffect',
-    url: '/Affect',
-    name: '에프터이펙트',
-    component: <AfterEffect />,
   },
 ]
 
