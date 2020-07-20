@@ -112,7 +112,20 @@ class SignupForm extends React.Component {
               />
             </Form.Item>
             <Form.Item>
-              <Input />
+              <label htmlFor="contactNum">연락처</label>
+              <Input
+                prefix={
+                  <Icon type="lock" style={{ color: 'rgb(0,0,0,.25)' }} />
+                }
+                name="passwordCheck"
+                type="passwordCheck"
+                id="loginPWC"
+                placeholder="82)+"
+                size="large"
+                defaultChecked={this.state.passwordCheck}
+                onChange={(e) => this.handleChange(e)}
+                onKeyPress={(e) => this.handleKeyPress(e)}
+              />
             </Form.Item>
           </Form>
           <Divider />

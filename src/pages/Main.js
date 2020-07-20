@@ -59,15 +59,15 @@ const Main = () => {
     >
       <Banner />
       <Divider>
-        <Title level={2}>영상 저작권 컨텐츠</Title>
+        <Title level={2}>영상 저작권 콘텐츠</Title>
       </Divider>
       <VideoCarousel />
       <Divider>
-        <Title level={2}>음원 저작권 컨텐츠</Title>
+        <Title level={2}>음원 저작권 콘텐츠</Title>
       </Divider>
       <AudioCarousel />
       <Divider>
-        <Title level={2}>이미지 저작권 컨텐츠</Title>
+        <Title level={2}>이미지 저작권 콘텐츠</Title>
       </Divider>
       <ImageCarousel />
       <Divider>
