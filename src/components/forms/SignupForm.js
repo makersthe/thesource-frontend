@@ -130,7 +130,7 @@ class SignupForm extends React.Component {
                 height: 88px;
                 border: 1px solid #dadada;
                 overflow: auto;
-                margin-bottom: 0px;
+                margin-bottom: 20px;
               `}
             >
               <Policy />
