@@ -9,9 +9,14 @@ import {
   message,
   Spin,
   Tooltip,
+  Checkbox,
 } from 'antd'
-// import { css } from 'emotion'
+import { css } from 'emotion'
 import styled from '@emotion/styled'
+
+import Policy from '../../pages/Footer/Policy'
+import Privacy from '../../pages/Footer/Privacy'
+import Copyright from '../../pages/Footer/Copyright'
 
 const SignupCard = styled(Card)`
   border-radius: 4px !important;
@@ -29,7 +34,7 @@ class SignupForm extends React.Component {
     this.state = {
       email: '',
       password: '',
-      passwordCheck: '',
+      // passwordCheck: '',
       loading: '',
     }
   }
@@ -96,22 +101,6 @@ class SignupForm extends React.Component {
               />
             </Form.Item>
             <Form.Item>
-              <label htmlFor="loginPWC">비밀번호 확인</label>
-              <Input
-                prefix={
-                  <Icon type="lock" style={{ color: 'rgb(0,0,0,.25)' }} />
-                }
-                name="passwordCheck"
-                type="passwordCheck"
-                id="loginPWC"
-                placeholder="비밀번호확인"
-                size="large"
-                defaultChecked={this.state.passwordCheck}
-                onChange={(e) => this.handleChange(e)}
-                onKeyPress={(e) => this.handleKeyPress(e)}
-              />
-            </Form.Item>
-            <Form.Item>
               <label htmlFor="contactNum">연락처</label>
               <Input
                 prefix={
@@ -127,15 +116,62 @@ class SignupForm extends React.Component {
                 onKeyPress={(e) => this.handleKeyPress(e)}
               />
             </Form.Item>
+            <div
+              className={css`
+                display: flex;
+              `}
+            >
+              <Checkbox>전체 동의</Checkbox>
+            </div>
+            <Checkbox>이용약관에 동의 (필수)</Checkbox>
+            <div
+              className={css`
+                width: 333px;
+                height: 88px;
+                border: 1px solid #dadada;
+                overflow: auto;
+                margin-bottom: 20px;
+              `}
+            >
+              <Policy />
+            </div>
+            <Checkbox>개인정보방침에 동의 (필수)</Checkbox>
+            <div
+              className={css`
+                width: 333px;
+                height: 88px;
+                border: 1px solid #dadada;
+                overflow: auto;
+                margin-bottom: 20px;
+              `}
+            >
+              <Privacy />
+            </div>
+            <Checkbox>저작권법에 동의 (필수)</Checkbox>
+            <div
+              className={css`
+                width: 333px;
+                height: 88px;
+                border: 1px solid #dadada;
+                overflow: auto;
+                margin-bottom: 20px;
+              `}
+            >
+              <Copyright />
+            </div>
+            <Checkbox>이벤트 등 프로모션 알림 메일 수신 (선택)</Checkbox>
           </Form>
           <Divider />
           <div>
             <Tooltip>
               <Button
-                onClick={() => this.handleSubmit}
+                className={css`
+                  margin: 1rem 0;
+                `}
+                type="primary"
+                onClick={() => this.handleSubmit()}
                 size="large"
                 block
-                disabled
               >
                 가입하기
               </Button>

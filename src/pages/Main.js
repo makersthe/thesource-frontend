@@ -5,7 +5,7 @@ import {
   Divider,
   Typography,
 } from 'antd'
-import { css } from 'emotion'
+// import { css } from 'emotion'
 import styled from '@emotion/styled'
 // import '../components/carousel/node_modules/@brainhubeu/react-carousel/lib/style.css'
 
@@ -14,6 +14,7 @@ import ImageCarousel from '../components/carousel/ImageCarousel'
 import VideoCarousel from '../components/carousel/VideoCarousel'
 import MainHeroCarousel from '../components/carousel/MainHeroCarousel'
 import Manual from '../components/Manual'
+import PartnerCarousel from '../components/carousel/PartnerCarousel'
 
 const { Title } = Typography
 
@@ -60,6 +61,10 @@ const Main = () => {
         <Title level={2}>디소스 사용 매뉴얼</Title>
       </Divider>
       <Manual />
+      <Divider>
+        <Title level={2}>파트너사</Title>
+      </Divider>
+      <PartnerCarousel />
       <Wrapper>
         <FlexRow gutter={16} type="flex" justify="center" align="top" />
         <Divider />

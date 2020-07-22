@@ -19,6 +19,7 @@ import {
 } from '@ant-design/icons'
 import { css } from 'emotion'
 import styled from '@emotion/styled'
+import { Link } from 'react-router-dom'
 
 const LoginCard = styled(Card)`
   border-radius: 4px !important;
@@ -135,9 +136,7 @@ class LoginForm extends React.Component {
               </Button>
               <LinkWrapper>
                 <LinkLabel>디소스에 처음이신가요?</LinkLabel>
-                <Tooltip title="아직 개발중입니다.">
-                  <a href="#signup">회원가입</a>
-                </Tooltip>
+                <Link to="/signup">회원가입</Link>
               </LinkWrapper>
             </Form.Item>
           </Form>
