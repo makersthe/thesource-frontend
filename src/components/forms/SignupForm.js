@@ -165,10 +165,13 @@ class SignupForm extends React.Component {
           <div>
             <Tooltip>
               <Button
-                onClick={() => this.handleSubmit}
+                className={css`
+                  margin: 1rem 0;
+                `}
+                type="primary"
+                onClick={() => this.handleSubmit()}
                 size="large"
                 block
-                disabled
               >
                 가입하기
               </Button>
