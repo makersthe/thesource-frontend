@@ -45,7 +45,7 @@ const Main = () => {
   return (
     <div>
       <MainHeroCarousel />
-      <Divider>
+      <Divider style={{ 'line-color': 'blue' }}>
         <Title level={2}>영상 저작권 콘텐츠</Title>
       </Divider>
       <VideoCarousel />
@@ -62,7 +62,7 @@ const Main = () => {
       </Divider>
       <Manual />
       <Divider>
-        <Title level={2}>파트너사</Title>
+        <Title level={2}>Together Company</Title>
       </Divider>
       <PartnerCarousel />
       <Wrapper>
