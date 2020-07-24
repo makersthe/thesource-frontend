@@ -1,37 +1,42 @@
 import React from 'react'
-// import { css } from 'emotion'
+import { css } from 'emotion'
 import styled from '@emotion/styled'
+import video from '../assets/videos/video.mp4'
 
 const SectionContainer = styled.div`
   display: flex;
   align-items: flex-start;
-  justify-content: center;
   width: 93vw;
-  height: 60vh;
+  height: 480px;
   margin-left: 50px;
-  background: gray;
+  margin-bottom: 2rem;
   @media (max-width: 485px) {
     max-width: 100%;
     margin: 0 auto !important;
   }
 `
 
-const SectionArticle = styled.div`
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  width: 45vw;
-  height: 20 vh;
-  background: white;
-`
-
 const Manual = () => {
   return (
     <SectionContainer>
-      <SectionArticle> 1. 영상소스 이용방법 </SectionArticle>
-      <SectionArticle> 2. 폰트소스 적용방법 </SectionArticle>
-      <SectionArticle> 3. 배경음악 적용방법 </SectionArticle>
-      <SectionArticle> 4. 프리미어프로 효과적용 </SectionArticle>
+      <div>
+        <video
+          className={css`
+            float: left;
+          `}
+          muted
+          autoPlay
+          playsInline
+          loop="loop"
+        >
+          <source src={`${video}`} type="video/mp4" />
+          <source src={`${video}`} type="video/wemb" />
+          <source src={`${video}`} type="video/ogg" />
+        </video>
+      </div>
+      <div>
+        <h2> 5분만에 끝내는 회원가입 </h2>
+      </div>
     </SectionContainer>
   )
 }
