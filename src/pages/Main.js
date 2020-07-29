@@ -15,6 +15,7 @@ import VideoCarousel from '../components/carousel/VideoCarousel'
 import MainHeroCarousel from '../components/carousel/MainHeroCarousel'
 import Manual from '../components/Manual'
 import PartnerCarousel from '../components/carousel/PartnerCarousel'
+import Popular from '../components/Popular'
 
 const { Title } = Typography
 
@@ -45,7 +46,11 @@ const Main = () => {
   return (
     <div>
       <MainHeroCarousel />
-      <Divider style={{ 'line-color': 'blue' }}>
+      <Divider>
+        <Title level={2}>인기있는 콘텐츠</Title>
+      </Divider>
+      <Popular />
+      <Divider>
         <Title level={2}>영상 저작권 콘텐츠</Title>
       </Divider>
       <VideoCarousel />
