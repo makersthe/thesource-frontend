@@ -14,9 +14,9 @@ import {
 import { css } from 'emotion'
 import styled from '@emotion/styled'
 
-import Policy from '../../pages/Footer/Policy'
-import Privacy from '../../pages/Footer/Privacy'
-import Copyright from '../../pages/Footer/Copyright'
+import Policy from '../footer/Policy'
+import Privacy from '../footer/Privacy'
+import Copyright from '../footer/Copyright'
 
 const SignupCard = styled(Card)`
   border-radius: 4px !important;
