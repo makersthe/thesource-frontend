@@ -7,8 +7,9 @@ export const routingStore = new RouterStore()
 export const history = syncHistoryWithStore(browserHistory, routingStore)
 
 ReactGA.initialize('UA-173488034-1', {
-  debug: true,
-  // debug: false,
+  // TODO: allow debug mode when local environment
+  // debug: true, // in dev
+  debug: false,
   titleCase: false,
   // gaOptions: {
   //   userId: 123,
