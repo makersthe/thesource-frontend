@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { Row, Card } from 'antd'
+import { Row } from 'antd'
 import Carousel from '@brainhubeu/react-carousel'
 import styled from '@emotion/styled'
 import { css } from 'emotion'
 import '@brainhubeu/react-carousel/lib/style.css'
 
 import axios from 'axios'
-
-const { Meta } = Card
 
 const SliderRow = styled(Row)`
   display: flex;
@@ -16,7 +14,7 @@ const SliderRow = styled(Row)`
   align-items: flex-start;
   justify-content: center;
   width: 100vw;
-  height: 600px;
+  height: 500px;
   margin: 2rem 0;
   @media (max-width: 700px) {
     max-width: 100%;
@@ -32,24 +30,18 @@ const ImageCarousel = () => {
       'https://dev-admin.thesource.co.kr/markets/images/',
     )
     const dataElement = responseImage.data?.map((item) => (
-      <Card
+      <img
         key={item.id}
         className={css`
           margin: 1rem !important;
         `}
         hoverable
-        cover={
-          <img
-            alt={item.username}
-            src={`https://dev-admin.thesource.co.kr${item.photo}`}
-            style={{ objectFit: 'cover' }}
-            width="400px"
-            height="400px"
-          />
-        }
-      >
-        <Meta title={item.title} description={item.description} />
-      </Card>
+        alt={item.username}
+        src={`https://dev-admin.thesource.co.kr${item.photo}`}
+        style={{ objectFit: 'cover' }}
+        width="500px"
+        height="400px"
+      />
     ))
     setData(dataElement)
   }
