@@ -55,7 +55,20 @@ const VideoCarousel = () => {
 
   return (
     <div>
-      <SliderRow gutter={16} type="flex" justify="center" align="top">
+      <SliderRow
+        gutter={16}
+        type="flex"
+        justify="center"
+        align="top"
+        className={css`
+          display: flex;
+          padding: 8px 0;
+          flex-wrap: wrap;
+          align-items: flex-start;
+          justify-content: center;
+          width: 100vw;
+        `}
+      >
         <Carousel
           autoPlay={3000}
           animationSpeed={2000}

@@ -10,6 +10,8 @@ import GnbHelp from '../header/GnbHelp'
 import GnbCart from '../header/GnbCart'
 import GnbAvatar from '../header/GnbAvatar'
 
+import Slider from '../header/slider'
+
 const { Header } = Layout
 
 const headerWrapperStyle = css`
@@ -23,9 +25,17 @@ const headerWrapperStyle = css`
 
 const LeftWrapper = styled.div`
   flex: 1;
+  @media only screen and (max-width: 850px) {
+    display: flex;
+    float: left;
+  }
 `
 const RightWrapper = styled.div`
   display: flex;
+  @media only screen and (max-width: 850px) {
+    display: flex;
+    float: right;
+  }
 `
 
 const HeaderWrapper = inject('routingStore')(
@@ -65,6 +75,7 @@ const HeaderWrapper = inject('routingStore')(
           <GnbHelp />
           <GnbCart />
           <GnbAvatar />
+          <Slider />
         </RightWrapper>
       </Header>
     )

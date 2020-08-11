@@ -36,7 +36,8 @@ class GnbSearch extends React.Component {
           margin: 0 3rem;
           align-items: center;
           justify-content: flex-start;
-          @media (max-width: 485px) {
+          @media only screen and (max-width: 850px) {
+            width: 400px;
             max-width: 100%;
             margin: 0 auto !important;
           }
@@ -48,7 +49,7 @@ class GnbSearch extends React.Component {
           `}
           addonBefore={selectBefore}
           placeholder="검색하실 소스를 입력하세요."
-          enterButton="검색"
+          // enterButton="검색"
           size="large"
           onSearch={(value) => {
             Log.info(`GNB Search: ${value}`)

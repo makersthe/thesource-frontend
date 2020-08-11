@@ -1,4 +1,5 @@
 import React from 'react'
+import { css } from 'emotion'
 import { Link } from 'react-router-dom'
 import { inject, observer } from 'mobx-react'
 import { Menu } from 'antd'
@@ -18,6 +19,11 @@ const Gnb = inject('routingStore')(
 
     return (
       <Menu
+        className={css`
+          @media only screen and (max-width: 850px) {
+            display: none;
+          }
+        `}
         theme="light"
         mode="horizontal"
         defaultSelectedKeys={[currentTab]}

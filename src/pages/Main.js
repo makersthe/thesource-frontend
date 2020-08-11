@@ -37,7 +37,7 @@ const FlexRow = styled(Row)`
   align-items: flex-start;
   justify-content: center;
   width: 100%;
-  @media (max-width: 700px) {
+  @media (max-width: 850px) {
     max-width: 100%;
     margin: 0 auto !important;
   }

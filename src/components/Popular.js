@@ -10,6 +10,8 @@ const Wrapper = styled.div`
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
   padding-bottom: 2rem;
+  @media only screen and (max-width: 850px) {
+  }
 `
 const Suggest = () => {
   return (

@@ -6,13 +6,16 @@ import GnbSearch from '../header/GnbSearch'
 
 const Container = styled.div`
   width: 100%;
-  height: 50vh;
+  height: 45vh;
   margin-bottom: 50px;
   background: url(${bannerImg}) no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media only screen and (max-width: 600px) {
+    height: 40vh;
+  }
 `
 
 const MainHero = () => {
