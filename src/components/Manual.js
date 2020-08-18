@@ -3,26 +3,30 @@ import { css } from 'emotion'
 import styled from '@emotion/styled'
 import video from '../assets/videos/video.mp4'
 
-const SectionContainer = styled.div`
+const VideoWrapper = styled.div`
+  width: 600px;
   display: flex;
+  justify-content: center;
   align-items: flex-start;
-  width: 93vw;
-  height: 480px;
-  margin-left: 50px;
-  margin-bottom: 2rem;
-  @media (max-width: 485px) {
-    max-width: 100%;
+  @media only screen and (max-width: 850px) {
+    width: 480px;
     margin: 0 auto !important;
   }
 `
 
 const Manual = () => {
   return (
-    <SectionContainer>
-      <div>
+    <div>
+      <VideoWrapper>
         <video
           className={css`
-            float: left;
+            width: 100%;
+            height: auto;
+            @media only screen and (max-width: 850px) {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
           `}
           muted
           autoPlay
@@ -33,11 +37,19 @@ const Manual = () => {
           <source src={`${video}`} type="video/wemb" />
           <source src={`${video}`} type="video/ogg" />
         </video>
-      </div>
-      <div>
+      </VideoWrapper>
+      <div
+        className={css`
+          display: flex;
+          float: right;
+          @media only screen and (max-width: 850px) {
+            width: 100%;
+          }
+        `}
+      >
         <h2> 5분만에 끝내는 회원가입 </h2>
       </div>
-    </SectionContainer>
+    </div>
   )
 }
 

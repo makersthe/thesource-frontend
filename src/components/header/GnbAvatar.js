@@ -16,6 +16,9 @@ const Wrapper = styled(Link)`
     cursor: pointer;
     background-color: #f1f1f1;
   }
+  @media only screen and (max-width: 850px) {
+    display: none;
+  }
 `
 
 const GnbAvatar = () => {
