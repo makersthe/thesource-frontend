@@ -1,6 +1,6 @@
 # TheSource
 
-> Work In Progress...
+> Deprecated
 
 - Temp : https://dsource.netlify.app
 - Dev : https://dev.thesource.co.kr
